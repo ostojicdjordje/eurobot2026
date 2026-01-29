@@ -13,6 +13,7 @@
 "./Core/Src/void_moduli/ax12.o"
 "./Core/Src/void_moduli/enc.o"
 "./Core/Src/void_moduli/odom.o"
+"./Core/Src/void_moduli/position.o"
 "./Core/Src/void_moduli/pwm.o"
 "./Core/Startup/startup_stm32f401retx.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"

@@ -8,6 +8,8 @@
 #include "void_moduli/enc.h"
 #include "stm32f4xx_hal.h"
 #include "void_moduli/pwm.h"
+#include "void_moduli/position.h"
+#include "void_moduli/ax12.h"
 
 void user_main() {
 
@@ -21,8 +23,8 @@ void user_main() {
 
 	HAL_TIM_Base_Start_IT(&htim1); //Pokreni interrupt tajmer
 
-	set_ref_velocity(-0.2, 0);
-
+//	set_ref_velocity(-0.2, 0);
+    set_ref_position(0.5, 0.5, 0);
 
 
 
