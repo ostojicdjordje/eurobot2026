@@ -1,0 +1,27 @@
+/*
+ * timer.c
+ *
+ *  Created on: Jan 28, 2026
+ *      Author: Win11
+ */
+
+#include "timer.h"
+#include "stm32f4xx_hal.h"
+
+uint32_t sys_ms=0;
+
+HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim->Instance==TIM1)
+	{
+		sys_ms++;
+		if(sys_ms%ODOM_MS==0)
+		{
+			odom_loop();
+		}
+		if(sys_ms%ODOM_MS==0)
+		{
+			bdc_loop();
+		}
+	}
+}
