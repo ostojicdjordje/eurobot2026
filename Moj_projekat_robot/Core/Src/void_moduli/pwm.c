@@ -25,8 +25,8 @@ const float acc_max = 0.25;
 
 volatile float motor_output_l = 0; //izlaz pid regulatora
 volatile float motor_output_r = 0;
-const float Kp_l = 3, Kp_r = 3;
-const float Ki_l = 0.01, Ki_r = 0.01;
+const float Kp_l = 100, Kp_r = 100; //Kp povecavamo dok robot ne krene da podrhtava, a onda Ki povecavamo, i omda Kp sredimo
+const float Ki_l = 5, Ki_r = 5;
 volatile float prev_error_l = 0; //prethodna greska
 volatile float prev_error_r = 0;
 

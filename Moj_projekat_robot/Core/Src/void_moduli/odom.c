@@ -16,8 +16,8 @@ const float rastojanje_tockova = 0.255; // [m]
 volatile float x = 0, y = 0, theta = 0, v_l = 0, v_r = 0, w = 0, v = 0;
 
 void odom_loop() {
-	v_r = enc1_get_delta_inc() * C_INC2RAD * radius_tocka / DT;
-	v_l = enc2_get_delta_inc() * C_INC2RAD * radius_tocka / DT;
+	v_r = enc2_get_delta_inc() * C_INC2RAD * radius_tocka / DT;
+	v_l = -enc1_get_delta_inc() * C_INC2RAD * radius_tocka / DT;
 	v = (v_r + v_l) / 2;
 	w = (v_r - v_l) / rastojanje_tockova;
 	v_r_measured = v + w * HALF_SEPARATION_WHEEL;

@@ -7,10 +7,12 @@
 
 #include "timer.h"
 #include "stm32f4xx_hal.h"
+#include "void_moduli/odom.h"
+#include "void_moduli/pwm.h"
 
 uint32_t sys_ms=0;
 
-HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Instance==TIM1)
 	{

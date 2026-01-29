@@ -23,6 +23,6 @@ int32_t enc1_get_delta_inc()
 int32_t enc2_get_delta_inc()
 {
 	int32_t tmp = (TIM5->CNT - ENC_START_INC);
-	TIM3->CNT = ENC_START_INC;
+	TIM5->CNT = ENC_START_INC;
 	return tmp;
 }
