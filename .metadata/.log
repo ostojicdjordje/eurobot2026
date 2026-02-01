@@ -17,3 +17,25 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-01-28 13:52:50.921
 !MESSAGE port: 
+!SESSION 2026-02-01 22:17:41.112 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-02-01 22:17:57.252
+!MESSAGE Log4j2 initialized with config file C:\Users\djoke\OneDrive\Dokumenti\GitHub\eurobot2026\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-02-01 22:18:02.046
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-02-01 22:18:29.864
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-02-01 22:18:29.865
+!MESSAGE port: 
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-02-01 22:18:58.092
+!MESSAGE Indexed 'Moj_projekat_robot' (35 sources, 136 headers) in 3.19 sec: 14,609 declarations; 76,493 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.26%)
