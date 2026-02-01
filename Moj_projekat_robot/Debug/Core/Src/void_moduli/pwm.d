@@ -29,7 +29,8 @@ Core/Src/void_moduli/pwm.o: ../Core/Src/void_moduli/pwm.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+ ../Core/Inc/void_moduli/position.h
 ../Core/Inc/void_moduli/pwm.h:
 ../Core/Inc/timer.h:
 ../Core/Inc/gpio.h:
@@ -64,3 +65,4 @@ Core/Src/void_moduli/pwm.o: ../Core/Src/void_moduli/pwm.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+../Core/Inc/void_moduli/position.h:
