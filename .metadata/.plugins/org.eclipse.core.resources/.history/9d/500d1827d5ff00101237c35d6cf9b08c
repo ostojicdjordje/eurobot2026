@@ -17,7 +17,7 @@
 #define SERVO_HZ      50.0f    // servo radi na 50Hz
 
 void servo_init(I2C_HandleTypeDef *hi2c);
-void servo_set_angle(uint8_t channel, float angle);
+void servo_set_angle (uint8_t channel, float angle_deg);
 
 
 #endif /* INC_VOID_MODULI_SERVO_H_ */

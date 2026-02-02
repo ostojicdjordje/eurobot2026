@@ -73,9 +73,7 @@ void servo_set_angle(uint8_t channel, float angle){
 	if(channel >= SERVO_COUNT) return;
 	if(angle < 0.0f) angle = 0.0f;
 	if(angle > 180.0f) angle = 180.0f;
-	float pulse_imp = SERVO_MIN_IMP + (angle / 180.0f) * (SERVO_MAX_IMP - SERVO_MIN_IMP);
-	float ticks = (pulse_imp * SERVO_HZ * PCA9685_PWM_RES) / 1000000.0f;
-	PCA9685_set_pwm(channel, 0, (uint16_t)ticks);
+	float pulse_imp = SERVO_MIN_IMP + (angle / 180.0f) * ()
 }
 
 
