@@ -42,7 +42,7 @@ static void PCA9685_set_pwm_freq(float freq){
 	uint8_t sleepmode = (oldmode & ~(1 << MODE1_RESTART)) | (1 << MODE1_SLEEP);
 
 	float prescale_value = (PCA9685_OSC_FREQ / (PCA9685_PWM_RES * freq)) -1.0f; // formula iz datasheet-a, str. 25
-	uint8_t prescale = (uint8_t)(prescale_value + 0.5f); // castujemo zato sto reg prihvata samo 8 bita o zaokruzujemo
+	uint8_t prescale = (uint8_t)(prescale_value + 0.5f); // castujemo zato sto reg prihvata samo 8 bita i zaokruzujemo
 
 	PCA9685_write_reg(PCA9685_MODE1, sleepmode);
 	PCA9685_write_reg(PCA9685_PRESCALE, prescale);
