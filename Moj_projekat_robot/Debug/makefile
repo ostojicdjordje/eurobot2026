@@ -1,6 +1,5 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (13.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -13,15 +12,10 @@ RM := rm -rf
 -include Core/Startup/subdir.mk
 -include Core/Src/void_moduli/subdir.mk
 -include Core/Src/subdir.mk
+-include subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
-ifneq ($(strip $(S_DEPS)),)
--include $(S_DEPS)
-endif
-ifneq ($(strip $(S_UPPER_DEPS)),)
--include $(S_UPPER_DEPS)
-endif
 ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)
 endif
@@ -29,23 +23,9 @@ endif
 
 -include ../makefile.defs
 
-OPTIONAL_TOOL_DEPS := \
-$(wildcard ../makefile.defs) \
-$(wildcard ../makefile.init) \
-$(wildcard ../makefile.targets) \
-
-
-BUILD_ARTIFACT_NAME := Moj_projekat_robot
-BUILD_ARTIFACT_EXTENSION := elf
-BUILD_ARTIFACT_PREFIX :=
-BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
-
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
 Moj_projekat_robot.elf \
-
-MAP_FILES += \
-Moj_projekat_robot.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
@@ -53,43 +33,42 @@ default.size.stdout \
 OBJDUMP_LIST += \
 Moj_projekat_robot.list \
 
+OBJCOPY_BIN += \
+Moj_projekat_robot.bin \
+
 
 # All Target
-all: main-build
-
-# Main-build Target
-main-build: Moj_projekat_robot.elf secondary-outputs
+all: Moj_projekat_robot.elf secondary-outputs
 
 # Tool invocations
-Moj_projekat_robot.elf Moj_projekat_robot.map: $(OBJS) $(USER_OBJS) C:\Users\Win11\Documents\GitHub\eurobot2026\Moj_projekat_robot\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Moj_projekat_robot.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Win11\Documents\GitHub\eurobot2026\Moj_projekat_robot\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Moj_projekat_robot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Moj_projekat_robot.elf: $(OBJS) $(USER_OBJS) C:\Users\djoke\OneDrive\Dokumenti\GitHub\eurobot2026\Moj_projekat_robot\STM32F401RETX_FLASH.ld
+	arm-none-eabi-gcc -o "Moj_projekat_robot.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\djoke\OneDrive\Dokumenti\GitHub\eurobot2026\Moj_projekat_robot\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Moj_projekat_robot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+default.size.stdout: $(EXECUTABLES)
 	arm-none-eabi-size  $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Moj_projekat_robot.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+Moj_projekat_robot.list: $(EXECUTABLES)
 	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Moj_projekat_robot.list"
+	@echo 'Finished building: $@'
+	@echo ' '
+
+Moj_projekat_robot.bin: $(EXECUTABLES)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Moj_projekat_robot.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Moj_projekat_robot.elf Moj_projekat_robot.list Moj_projekat_robot.map default.size.stdout
+	-$(RM) *
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
 
-fail-specified-linker-script-missing:
-	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'
-	@exit 2
-
-warn-no-linker-script-specified:
-	@echo 'Warning: No linker script specified. Check the linker settings in the build configuration.'
-
-.PHONY: all clean dependents main-build fail-specified-linker-script-missing warn-no-linker-script-specified
+.PHONY: all clean dependents
+.SECONDARY:
 
 -include ../makefile.targets

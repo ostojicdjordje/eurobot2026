@@ -1,2 +1,2 @@
-../Core/Src/void_moduli/odom.c:18:6:odom_loop	24	static
-../Core/Src/void_moduli/odom.c:33:7:normalize_rad_angle	16	static
+odom.c:18:6:odom_loop	24	static
+odom.c:33:7:normalize_rad_angle	24	static
