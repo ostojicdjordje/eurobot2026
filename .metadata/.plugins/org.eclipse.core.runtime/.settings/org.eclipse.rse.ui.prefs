@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 org.eclipse.rse.preferences.order.connections=DESKTOP-PN4B1HS.Local
+=======
+org.eclipse.rse.preferences.order.connections=Lenovo.Local
+>>>>>>> bfc64c68a3e696b90a94ac507bafef4367d59fb7

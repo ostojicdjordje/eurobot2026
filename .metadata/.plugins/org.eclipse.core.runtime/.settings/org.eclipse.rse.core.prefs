@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 activeuserprofiles=DESKTOP-PN4B1HS;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=Win11
+=======
+activeuserprofiles=Lenovo;Team
+eclipse.preferences.version=1
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=djoke
+>>>>>>> bfc64c68a3e696b90a94ac507bafef4367d59fb7

@@ -1,4 +1,0 @@
-../Core/Src/void_moduli/position.c:35:6:set_ref_position	32	static
-../Core/Src/void_moduli/position.c:67:14:trajectory_v	16	static
-../Core/Src/void_moduli/position.c:88:14:trajectory_w	16	static
-../Core/Src/void_moduli/position.c:106:6:position_loop	48	static

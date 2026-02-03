@@ -3,7 +3,11 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
     <appender name="DEBUGFILE" class="org.apache.log4j.RollingFileAppender">
         <param name="Append" value="true"/>
+<<<<<<< HEAD
         <param name="File" value="C:/Users/Win11/Documents/GitHub/eurobot2026/.metadata/.ide.log"/>
+=======
+        <param name="File" value="C:/Users/djoke/OneDrive/Dokumenti/GitHub/eurobot2026/.metadata/.ide.log"/>
+>>>>>>> bfc64c68a3e696b90a94ac507bafef4367d59fb7
         <param name="MaxBackupIndex" value="1"/>
         <param name="MaxFileSize" value="50MB"/>
         <param name="Threshold" value="INFO"/>
