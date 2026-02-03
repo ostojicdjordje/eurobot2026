@@ -5,7 +5,7 @@
  *      Author: Void
  */
 
-#include "servo.h"
+#include "void_moduli/servo.h"
 
 
 #define PCA9685_MODE1       0x00  // str. 10, datasheet
